@@ -6,10 +6,10 @@ html {
 }
 
 body {
-    margin: 8px auto;
-    background: #fff;
-    width: 80%;
-    
+  
+    background: rgb(242, 209, 245);
+    max-width: 500px;
+    margin: auto;
 }
 
 footer{
