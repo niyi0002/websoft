@@ -1,0 +1,3 @@
+[submodule ".solution"]
+	path = .solution
+	url = git@gitlab.com:webbprogrammering/websoft-solution.git
