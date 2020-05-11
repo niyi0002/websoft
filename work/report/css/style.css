@@ -13,8 +13,8 @@ body {
 
 footer{
 
-    width: fit-content;
-    height: 3dp;
+    width: 100%;
+
     background-color: rgb(220, 167, 241);
 
 }
