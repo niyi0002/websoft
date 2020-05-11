@@ -10,3 +10,13 @@ body {
     background: #fff;
     width: 700px;
 }
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(216, 141, 216);
+    color: rgb(63, 43, 63);
+    text-align: center;
+}
