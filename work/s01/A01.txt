@@ -1,0 +1,10 @@
+
+
+* Did you before know about the techniques Git, GitHub, Markdown and/or GitHub Pages?
+Yes, I knew about the GitHub before. I have used in my previous courses. But I have not used the Markdown before taking this course. This is the first time I experience creating/working with websites.
+* Have you ever created websites before?
+No, I have never created a website before. 
+* Briefly explain your experience and knowledge of web application development.
+I had no experience or knowledge about web development before.
+* What is your TIL for this course section?
+Thanks to assignment I have learned how to fork a repository on GitHub which I have not done before. I also learned how to link to an another page of my website which I thought was really fun and pretty simple to do.
