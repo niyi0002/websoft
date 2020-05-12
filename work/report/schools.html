@@ -22,7 +22,7 @@
     </style>
 </head>
 <body onLoad="buildHtmlTable('#excelDataTable')">
-    <table id="excelDataTable" ,border="1">
+    <table id="excelDataTable" >
     </table>
   </body>
 
@@ -32,8 +32,7 @@ $.getJSON( "javascript/fetch/data/1081.json", function( data){
   JSONItems = data;
   console.log(JSONItems);
 }); 
-</script>
-<script type = "text/javascript" language = "javascript">
+
 function buildHtmlTable(selector) {
   var columns = addAllColumnHeaders(JSONItems, selector);
 
