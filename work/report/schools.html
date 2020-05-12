@@ -13,7 +13,15 @@
 
 
 
-
+</script>
+<script type = "text/javascript" language = "javascript">
+    var JSONItems = [];
+ $.getJSON( "javascript/fetch/data/1081.json", function( data){
+   JSONItems = data;
+   console.log(JSONItems);
+  populateTable(JSONItems);
+ }); 
+ </script>
 
 <script type = "text/javascript" language = "javascript">
 
@@ -22,7 +30,7 @@ function populateTable(object) {
 var obj = object;
 var table = $("<table />");
 table[0].border = "1";
-var columns = Object.keys(obj[0]);
+var columns = Object.keys(obj);
 var columnCount = columns.length;
 var row = $(table[0].insertRow(-1));
 for (var i = 0; i < columnCount; i++) {
@@ -46,15 +54,7 @@ dvTable.append(table);
 
 }
 
-</script>
-<script type = "text/javascript" language = "javascript">
-    var JSONItems = [];
- $.getJSON( "javascript/fetch/data/1081.json", function( data){
-   JSONItems = data;
-   console.log(JSONItems);
-  populateTable(JSONItems);
- }); 
- </script>
+
 </body>
 
 </html>
