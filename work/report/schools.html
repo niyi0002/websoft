@@ -30,7 +30,7 @@ function populateTable(object) {
 var obj = object;
 var table = $("<table />");
 table[0].border = "1";
-var columns = Object.keys(obj[1]);
+var columns = Object.keys(obj[2]);
 var columnCount = columns.length;
 var row = $(table[0].insertRow(-1));
 for (var i = 0; i < columnCount; i++) {
