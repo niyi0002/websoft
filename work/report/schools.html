@@ -18,21 +18,31 @@
         }
     </style>
 </head>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
-<body>
+<script>
 
-    <div id="id01"></div>
+    $(function() {
 
-    <script>
-    function myFunction(arr) {
-        var out = "";
-        var i;
-        for(i = 0; i<arr.length; i++) {
-            out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
-        }
-        document.getElementById("id01").innerHTML = out;
-    }
-    </script>
+
+   var people = [];
+
+   $.getJSON('1081.json', function(data) {
+       $.each(data.person, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script>
+</head>
+<body onload="$()">
+
+
     
 <script src="schools.js"></script>
 
