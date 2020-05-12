@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
         th, td, p, input {
             font:14px Verdana;
@@ -23,7 +24,7 @@
 
 <script>
    var JSONItems = [];
-$.getJSON( "1081.json", function( data){
+$.getJSON( "data/1081.json", function( data){
   JSONItems = data;
   console.log(JSONItems);
 }); 
