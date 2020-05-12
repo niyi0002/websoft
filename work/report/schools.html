@@ -18,33 +18,31 @@
         }
     </style>
 </head>
-<head>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
-<script>
-
-    $(function() {
-
-
-   var people = [];
-
-   $.getJSON('1081.json', function(data) {
-       $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
-
-   });
-
-});
-</script>
-</head>
-<body onload="$()">
+<body >
 
 
     
-<script src="schools.js"></script>
+<script>function change_myselect(sel) {
+    var obj, dbParam, xmlhttp, myObj, x, txt = "";
+    obj = { table: sel, limit: 20 };
+    dbParam = JSON.stringify(obj);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        txt += "<table border='1'>"
+        for (x in myObj) {
+          txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+        }
+        txt += "</table>"
+        document.getElementById("demo").innerHTML = txt;
+      }
+    };
+    xmlhttp.open("POST", "1081.json", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+  }</script>
 
 </body>
 </html>
