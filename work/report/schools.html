@@ -30,9 +30,10 @@
    var JSONItems = [];
 $.getJSON( "javascript/fetch/data/1081.json", function( data){
   JSONItems = data;
-  //console.log(JSONItems);
+  console.log(JSONItems);
 }); 
-
+</script>
+<script>
 function buildHtmlTable(selector) {
   var columns = addAllColumnHeaders(JSONItems, selector);
 
