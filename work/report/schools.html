@@ -29,7 +29,7 @@
      $.getJSON( "javascript/fetch/data/1081.json", function( data){
        JSONItems = data;
        console.log(JSONItems);
-      populateTable(data);
+      populateTable(JSONItems);
      }); 
      </script>
 </body>
@@ -42,7 +42,7 @@ function populateTable(object) {
 var obj = object;
 var table = $("<table />");
 table[0].border = "1";
-var columns = Object.keys(obj[0]);
+var columns = keys(obj[0]);
 var columnCount = columns.length;
 var row = $(table[0].insertRow(-1));
 for (var i = 0; i < columnCount; i++) {
