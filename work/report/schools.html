@@ -2,15 +2,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>List Of Schools</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
+    <style>
+        th, td, p, input {
+            font:14px Verdana;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
 </head>
 
 <body>
 
 
-<script type="text/javascript" src="js/main.js"></script>
+<script>
+obj = { table: "schools", limit: 100 };
+dbParam = JSON.stringify(obj);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    myObj = JSON.parse(this.responseText);
+    txt += "<table border='1'>"
+    for (x in myObj) {
+      txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+    }
+    txt += "</table>"
+    document.getElementById("demo").innerHTML = txt;
+  }
+}
+xmlhttp.open("POST", "1081.json", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("x=" + dbParam);
+</script>
+
+
 </body>
 </html>
