@@ -13,15 +13,10 @@
 
 
 
+
+
 <script type = "text/javascript" language = "javascript">
-    var JSONItems = [];
- $.getJSON( "javascript/fetch/data/1081.json", function( data){
-   JSONItems = data;
-   console.log(JSONItems);
-  populateTable(JSONItems);
- }); 
- </script>
-<script type = "text/javascript" language = "javascript">
+
 function populateTable(object) {
 
 var obj = object;
@@ -52,7 +47,14 @@ dvTable.append(table);
 }
 
 </script>
-
+<script type = "text/javascript" language = "javascript">
+    var JSONItems = [];
+ $.getJSON( "javascript/fetch/data/1081.json", function( data){
+   JSONItems = data;
+   console.log(JSONItems);
+  populateTable(JSONItems);
+ }); 
+ </script>
 </body>
 
 </html>
