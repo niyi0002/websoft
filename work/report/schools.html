@@ -21,27 +21,20 @@
 
 <body>
 
+    <div id="id01"></div>
 
-<script>
-obj = { table: "schools", limit: 100 };
-dbParam = JSON.stringify(obj);
-xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    myObj = JSON.parse(this.responseText);
-    txt += "<table border='1'>"
-    for (x in myObj) {
-      txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+    <script>
+    function myFunction(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i<arr.length; i++) {
+            out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
+        }
+        document.getElementById("id01").innerHTML = out;
     }
-    txt += "</table>"
-    document.getElementById("demo").innerHTML = txt;
-  }
-}
-xmlhttp.open("POST", "1081.json", true);
-xmlhttp.setRequestHeader("Content-type", "http://www.w3.org/2001/XMLSchema-instance");
-xmlhttp.send("x=" + dbParam);
-</script>
-
+    </script>
+    
+<script src="schools.js"></script>
 
 </body>
 </html>
