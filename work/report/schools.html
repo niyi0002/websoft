@@ -5,7 +5,7 @@
 <script type = "text/javascript" 
          src = "https://code.jquery.com/jquery-3.1.1.min.js">
       </script>
-
+<script type="text/javascript" src="jsonTable.js"></script>
 <body>
     <div id="dvCSV">
     </div>
@@ -24,7 +24,7 @@
 
 function populateTable(object) {
 
-var obj = object[Skolenheter];
+var obj = object;
 var table = $("<table />");
 table[0].border = "1";
 var columns = Object.keys(obj);
