@@ -8,7 +8,7 @@ html {
 body {
   
     background: white;
-    width: 700px;
+    width: 500px;
     margin: auto;
 }
 
@@ -17,7 +17,7 @@ footer{
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: rgb(104, 11, 158);
+    background-color: rgb(217, 180, 239);
     color: white;
     text-align: center;
 }
