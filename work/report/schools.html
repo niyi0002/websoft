@@ -6,41 +6,49 @@
          src = "https://code.jquery.com/jquery-3.1.1.min.js">
       </script>
 <body>
-    <table id="tableName"></table>
+    <div id="dvCSV">
+    </div>
     
+
+<script type = "text/javascript" language = "javascript">
+    var JSONItems = [];
+ $.getJSON( "javascript/fetch/data/1081.json", function( data){
+   JSONItems = data;
+   console.log(JSONItems);
+  populateTable(JSONItems);
+ }); 
+ </script>
+
 <script type = "text/javascript" language = "javascript">
 
-    $(document).ready(function() {
-  // $.getJSON(url, callback);
-  $.getJSON('javascript/fetch/data/1081.json', function(json) {
-    tableGenerator('#tableName', json);
-  });
-});
+function populateTable(object) {
 
-function tableGenerator(selector, data) { // data is an array
-  var keys = Object.keys(Object.assign({}, ...data));// Get the keys to make the header
-  // Add header
-  var head = '<thead><tr>';
-  keys.forEach(function(key) {
-    head += '<th>'+key+'</th>';
-  });
-  $(selector).append(head+'</tr></thead>');
-  // Add body
-  var body = '<tbody>';
-  data.forEach(function(obj) { // For each row
-    var row = '<tr>';
-    keys.forEach(function(key) { // For each column
-      row += '<td>';
-      if (obj.hasOwnProperty(key)) { // If the obj doesnt has a certain key, add a blank space.
-        row += obj[key];
-      }
-      row += '</td>';
-    });
-    body += row+'<tr>';
-  })
-  $(selector).append(body+'</tbody>');
+var obj = object;
+var table = $("<table />");
+table.border = "1";
+var columns = Object.keys(obj);
+var columnCount = columns.length;
+var row = $(table[0].insertRow(-1));
+for (var i = 0; i < columnCount; i++) {
+    var headerCell = $("<th />");
+    headerCell.html([columns[i]]);
+    row.append(headerCell);
 }
 
+for (var i = 0; i < obj.length; i++) {
+    row = $(table[0].insertRow(-1));
+    for (var j = 0; j < columnCount; j++) {
+        var cell = $("<td />");
+        cell.html(obj[i][columns[j]]);
+        row.append(cell);
+    }
+}
+
+var dvTable = $("#dvCSV");
+dvTable.html("");
+dvTable.append(table);
+
+}
 </script>
 
 </body>
