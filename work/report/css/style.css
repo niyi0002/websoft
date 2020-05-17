@@ -15,8 +15,8 @@ body {
 footer{
     position: fixed;
     width: 100%;
-    height: 1px;
     left: 0;
+    bottom: 0;
     background-color: rgb(217, 180, 239);
     color: white;
     text-align: center;
