@@ -5,7 +5,9 @@
 <script src = "https://code.jquery.com/jquery-3.1.1.min.js">
       </script>
 <body>
-    <table id="tableName" , border: 1px solid black></table>
+    <table id="tableName">
+      
+    </table>
     
 
 <script type = "text/javascript" language = "javascript">
@@ -19,7 +21,7 @@ $(document).ready(function() {
 function tableGenerator(selector, data) { // data is an array
   var keys = Object.keys(Object.assign({}, ...data));// Get the keys to make the header
   // Add header
-  var head = '<thead><tr>';
+  var head = '<thead><tr border= 1>';
   keys.forEach(function(key) {
     head += '<th>'+key+'</th>';
   });
