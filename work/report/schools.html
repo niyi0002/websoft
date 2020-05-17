@@ -21,7 +21,7 @@ $(document).ready(function() {
 function tableGenerator(selector, data) { // data is an array
   var keys = Object.keys(Object.assign({}, ...data));// Get the keys to make the header
   // Add header
-  var head = '<thead><tr border= 1>';
+  var head = '<thead><tr>';
   keys.forEach(function(key) {
     head += '<th>'+key+'</th>';
   });
