@@ -25,7 +25,7 @@ function populateTable(object) {
 
 var obj = object;
 var table = $("<table />");
-table.border = "1";
+table[0].border = "1";
 var columns = Object.keys(obj);
 var columnCount = columns.length;
 var row = $(table[0].insertRow(-1));
