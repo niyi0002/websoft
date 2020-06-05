@@ -69,7 +69,9 @@ table, td {
     position: absolute;
     background-image: url(../img/duck.png);
     background-size: 300px;
-    border: 2px solid black;
+    border: 2px   solid black;
+    border-style: dashed;
+    border-radius: 50%;
     top: 15px;
     left: 15px;
   }
