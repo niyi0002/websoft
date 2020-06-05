@@ -3,6 +3,7 @@
  */
 html {
     overflow-y: scroll;
+
 }
 
 body {
@@ -63,12 +64,12 @@ table, td {
 
   .duck{
 
-    width: 128px;
-    height: 128px;
-    background-image: url(../img/duck.png);
-    background-size: 128px;
-    border: 2px solid black;
+    width: 256px;
+    height: 256px;
     position: absolute;
+    background-image: url(../img/duck.png);
+    background-size: 300px;
+    border: 2px solid black;
     top: 15px;
     left: 15px;
   }

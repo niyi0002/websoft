@@ -10,7 +10,7 @@ element.addEventListener("click" , function()
 });
 element.addEventListener("mouseover" , function()
 {
-    element.style.left = element.offsetLeft + 20 + "px";
+   if(element.offsetLeft < 980) element.style.left = element.offsetLeft + 20 + "px";
     console.log("Mouse Over!");
     console.log(element.style.left);
     console.log(element.offsetLeft);
