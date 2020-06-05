@@ -11,7 +11,11 @@ body {
     width: 500px;
     margin: auto;
 }
-
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 footer{
     position: fixed;
     width: 100%;
