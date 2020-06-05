@@ -22,6 +22,18 @@ footer{
     text-align: center;
 }
 
-table, th, td {
-    border: 1px solid black;
+table, td {
+    border: 2px solid rgb(152, 241, 19); ;
+      border-collapse: collapse;
+    background-color: rgba(172, 255, 47, 0.514);
+     padding: 10px;
+     border-style: dashed;
+     
+  }
+  th{
+     border: 2px solid  #3ee8af;;
+      border-collapse: collapse;
+    background-color: #7fffd487;
+     padding: 15px;
+     border-style: dashed;
   }
