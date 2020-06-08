@@ -74,6 +74,7 @@ table, td {
     border-radius: 50%;
     top: 45px;
     left: 20px;
+    visibility: visible;
   }
   .duck:hover{
 
