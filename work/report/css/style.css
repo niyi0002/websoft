@@ -13,6 +13,10 @@ body {
     margin: auto;
 }
 ul {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
