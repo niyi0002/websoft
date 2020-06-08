@@ -1,0 +1,99 @@
+/*
+ * Comments are written as C++ style. 
+ */
+html {
+    overflow-y: scroll;
+
+}
+
+body {
+  
+    background: white;
+    width: 500px;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(217, 180, 239);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color:blueviolet;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: plum;
+  }
+footer{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(217, 180, 239);
+    color: white;
+    text-align: center;
+}
+
+table, td {
+    border: 2px solid rgb(152, 241, 19); ;
+      border-collapse: collapse;
+    background-color: rgba(172, 255, 47, 0.514);
+     padding: 10px;
+     border-style: dashed;
+     
+  }
+  th{
+     border: 2px solid  #3ee8af;;
+      border-collapse: collapse;
+    background-color: #7fffd487;
+     padding: 15px;
+     border-style: dashed;
+  }
+
+  .duck{
+
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    background-image: url(../img/duck.png);
+    background-size: 300px;
+    border: 2px   solid black;
+    border-style: dashed;
+    border-radius: 50%;
+    top: 45px;
+    left: 20px;
+  }
+  .duck:hover{
+
+      /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
