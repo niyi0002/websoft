@@ -3,15 +3,7 @@
 (function(){
 var element = document.getElementById("duck");
 
-element.addEventListener("click" , function()
-{
-    if (element.style.display === "none") {
-        element.style.display = "block";
-      } else {
-        element.style.display === "none";
-      }
-    console.log("Duck clicked!");
-});
+
 element.addEventListener("mouseover" , function()
 {
    if(element.offsetLeft < 1045 )element.style.left = element.offsetLeft + 20 + "px";
@@ -21,5 +13,15 @@ element.addEventListener("mouseover" , function()
 });
 console.log(element);
 console.log("Duck ready!!");
+
+element.addEventListener("dblclick" , function()
+{
+console.log("Double Clicked!");
+if (element.style.visibility === "visible") {
+  element.style.visibility = "hidden";
+} else {
+  element.style.visibility = "visible";
+}
+});
 
 })();
