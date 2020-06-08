@@ -17,9 +17,9 @@ console.log("Duck ready!!");
 element.addEventListener("dblclick" , function()
 {
 console.log("Double Clicked!");
-if (element.style.visibility = 'visible') {
+if (element.style.visibility === 'visible') {
   element.style.visibility = 'hidden';
-} else {
+} else if(element.style.visibility === 'hidden') {
   element.style.visibility = 'visible';
 }
 });
